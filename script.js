@@ -1,4 +1,4 @@
-var playerName = prompt('Qual é o seu nome?')
+var playerName = prompt('What is your name?')
 
 var playerChoice = 0;
 
@@ -15,7 +15,7 @@ function defineName(name){
     document.getElementById('player-name').innerHTML = name
 }
 
-message(`Bem-vindo ${playerName}! Está preparado? Escolha uma opção acima...`)
+message(`Welcome ${playerName}! Are you ready? Choose an option above...`)
 defineName(playerName)
 
 
@@ -83,20 +83,20 @@ function play(choice){
     var winner = calcChoice(playerChoice, computerChoice);
     
     if(winner == 0){
-        message('Empate')
+        message('Tied')
     }
     if(winner == 1){
-        message(`Ponto para ${playerName}`)
+        message(`Point for ${playerName}`)
         sumPlayerPoints()
     }
     if(winner == 2){
-        message('Ponto para Computador')
+        message('Point for Computer')
         sumComputerPoints()
     }
     setTimeout(function(){
         unselect('player', playerChoice)
         unselect('computer', computerChoice)
-        message(`${playerName}, escolha uma opção acima...`)
+        message(`${playerName}, choose an option above...`)
     }, 2000)
 }
 
