@@ -19,13 +19,10 @@ message(`Welcome ${playerName}! Are you ready? Choose an option above...`)
 defineName(playerName)
 
 
-function draw(min, max){
+function randomPlay(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
-//calcula e retorna quem ganhou
-// 0 - empate
-// 1 - jogador
-// 2 - computador
+
 function calcChoice(player, computer){
     if(player == 1 && computer == 1){
         return 0;
@@ -60,7 +57,7 @@ function sumPlayerPoints(){
     document.getElementById('player-points').innerHTML = playerPoints
 }
 function sumComputerPoints(){
-    computerPoints ++;
+    computerPoints++;
     document.getElementById('computer-points').innerHTML = computerPoints
 }
 
@@ -75,11 +72,9 @@ function play(choice){
     playerChoice = choice;
     select('player', playerChoice)
 
-    //sortear a jogada do computador
-    computerChoice = draw(1, 3)
+    computerChoice = randomPlay(1, 3)
     select('computer', computerChoice)
 
-    //calcular quem ganhou
     var winner = calcChoice(playerChoice, computerChoice);
     
     if(winner == 0){

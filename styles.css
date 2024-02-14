@@ -1,6 +1,14 @@
 *{
     font-family: "Helvetica Neue", Helvetica, Arial;
 }
+html, body {
+    overflow-x: hidden;
+}
+
+#main{
+    width: 95%;
+    margin: 0 auto;
+}
 #title{
     text-align: center;
 }
@@ -42,7 +50,7 @@
 }
 #player #player-choice li, #computer #computer-choice li{
     display: inline;
-    padding: 0 1em;
+    padding: 0 2em;
 }
 #player #player-choice a, #computer #computer-choice a{
     opacity: .5;
@@ -72,4 +80,43 @@
     text-align: center;
     margin: 1.25em 0;
     padding: 1.25em;
+}
+@media screen and (max-width: 1130px){
+    #player #player-choice li, #computer #computer-choice li{
+        padding: 0 1em;
+    }
+}
+@media screen and (max-width: 924px){
+    #scoreboard{
+        display: block;
+    }
+    #computer .info{
+        flex-direction: row;
+    }
+    #player #player-choice, #computer #computer-choice{
+        padding: 10px 0 0;
+    }
+    #player #player-choice li, #computer #computer-choice li{
+        padding: 0 2.5em;
+    }
+    #versus p{
+        font-size: 1em;
+        text-align: center;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 660px){
+    #player #player-choice li, #computer #computer-choice li{
+        padding: 0 1em;
+    }
+}
+@media screen and (max-width: 430px){
+    #player #player-choice img, #computer #computer-choice img{
+        max-width: 50px;
+    }
+}
+@media screen and (max-width: 330px){
+    #player #player-choice li, #computer #computer-choice li{
+        padding: 0 0.5em;
+    }
 }
