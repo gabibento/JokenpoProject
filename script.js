@@ -1,4 +1,4 @@
-var playerName = prompt('What is your name?')
+var playerName;
 
 var playerChoice = 0;
 
@@ -15,8 +15,17 @@ function defineName(name){
     document.getElementById('player-name').innerHTML = name
 }
 
-message(`Welcome ${playerName}! Are you ready? Choose an option above...`)
-defineName(playerName)
+function initGame() {
+    playerName = prompt('What is your name?');
+    if (!playerName) {
+        playerName = 'Player';
+    }
+
+    message(`Welcome ${playerName}! Are you ready? Choose an option above...`);
+    defineName(playerName);
+}
+
+initGame(); 
 
 
 function randomPlay(min, max){
@@ -64,11 +73,14 @@ function sumComputerPoints(){
 function select(type, choice){
     document.getElementById(`${type}-choice-${choice}`).classList.add('selected')
 }
-function unselect(type, choice){
-    document.getElementById(`${type}-choice-${choice}`).classList.remove('selected')
+function unselect(type){
+    document.getElementById(`${type}-choice-1`).classList.remove('selected')
+    document.getElementById(`${type}-choice-2`).classList.remove('selected')
+    document.getElementById(`${type}-choice-3`).classList.remove('selected')
 }
 
 function play(choice){
+   
     playerChoice = choice;
     select('player', playerChoice)
 
@@ -93,8 +105,8 @@ function play(choice){
         unselect('computer', computerChoice)
         message(`${playerName}, choose an option above...`)
     }, 2000)
-}
 
+}
 document.getElementById('player-choice-1').onclick = function() {play(1)}
 document.getElementById('player-choice-2').onclick = function() {play(2)}
 document.getElementById('player-choice-3').onclick = function() {play(3)}
