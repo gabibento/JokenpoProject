@@ -64,7 +64,6 @@ function calcChoice(player, computer){
 ### Escolha Aleatória do Computador:
 
 - Implementei a função randomPlay para gerar uma escolha aleatória para o computador (1, 2 ou 3).
-Exemplo do Código:
 
 ```JavaScript
 function randomPlay(min, max){
