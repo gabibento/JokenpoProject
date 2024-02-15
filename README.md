@@ -2,6 +2,14 @@
 
 Este repositório contém uma versão aprimorada do jogo Jokenpo (Pedra, Papel, Tesoura), originalmente desenvolvido como parte do curso de [DevSamurai](https://st.devsamurai.com.br/0cqlvn/index.html?utm_source=&utm_medium=cpc&utm_campaign=15847297851&utm_content=574424152468&xpromo=gl-574424152468&utm_term=133556228353&gad_source=1&gclid=Cj0KCQiA5rGuBhCnARIsAN11vgSmJed635KHLnMQsLYRjiz0bWMq9ZVVdiLVZeSNVJdzhwvNgLNo1sgaAovOEALw_wcB). Durante o curso, foram aprendidos conceitos essenciais de HTML, CSS e JavaScript, e o jogo foi personalizado com melhorias adicionais.
 
+<div style="display: inline-block;">
+<img src="img/jokenpoDesktop.gif" alt="Exemplo" width="750"/>
+<img align="right" src="img/jokenpoMobile.gif" alt="Exemplo" width="200" />
+</div>
+
+<br/>
+<br/>
+
 [Visualizar no GitHub Pages](https://gabibento.github.io/JokenpoProject/)
 
 ## Funcionalidades Principais
